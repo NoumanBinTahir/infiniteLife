@@ -112,12 +112,51 @@
     </div>
   </div>
 </ion-content>
-<div class="asset-box">
-  <img src="assets/gender.png" style="display:inline-block" height="35px" />
-  <img src="assets/edu.png" style="display:inline-block" height="35px" />
-  <img src="assets/newplus.png" style="display:inline-block" height="45px" />
-  <img src="assets/asset.png" style="display:inline-block" height="35px" />
+<div class="asset-box position-relative">
+  <ion-button id="open-modal" class="position-absolute stat-btn" expand="block">
+    <img src="assets/stats.png" class="" alt="">
+  </ion-button>
+  <div class="footer-icon-group">
+    <div class="border-a"><img src="assets/gender.png" style="display:inline-block" height="35px" /></div>
+    <div class="border-a"><img src="assets/edu.png" style="display:inline-block" height="35px" /></div>
+    <div class="border-a"><img src="assets/newplus.png" style="display:inline-block" height="45px" /></div>
+    <div class="border-a"><img src="assets/asset.png" style="display:inline-block" height="35px" /></div>
+    <div class="border-a"><img src="assets/activities.png" style="display:inline-block" height="35px" /></div>
+
+
+
+
+
+  </div>
 </div>
+<ion-modal trigger="open-modal" (willDismiss)="setOpen(false)">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="modal.dismiss()">Close</ion-button>
+        </ion-buttons>
+        <ion-title>Stats</ion-title>
+
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <!-- Default Progressbar -->
+      HEALTH
+      <ion-progress-bar value="0.9"></ion-progress-bar> <br />
+      LOOKS
+      <ion-progress-bar value="1.0"></ion-progress-bar><br />
+      CONFIDENCE
+      <ion-progress-bar value="0.7"></ion-progress-bar><br />
+      STAMINA
+      <ion-progress-bar value="0.3"></ion-progress-bar><br />
+      CRAZINESS
+      <ion-progress-bar value="0.8"></ion-progress-bar>
+      <br />
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
 <!-- <ion-footer class="ion-no-border">
   <ion-toolbar class="icons-tabs-btns">
    
