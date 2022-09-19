@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'Infinite Life', url: '/folder/Inbox', icon: 'mail' },
+    { title: 'New Life', url: '/home', icon: 'home' },
     
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = ['New Life', 'Save Life', 'Accessories', 'Careers', 'Help', 'Settings'];
   constructor() {}
 }
