@@ -6,6 +6,7 @@
     <ion-title>
       <ion-row>
         <ion-col class="hero-img">
+
           <img src="assets/newdns.png" style="display:inline-block" height="35px" />
         </ion-col>
         <ion-col class="hero-title">INFINITE LIFE</ion-col>
@@ -18,13 +19,62 @@
     <ion-title>
       <ion-row>
         <ion-col class="hero-img">
-          <img src="assets/user-male.png" style="display:inline-block" height="40px" />
+          <ion-button class="profile-data" id="click-trigger" color="transparent" style="--padding-start: 0em;
+          --padding-end: 0em;"><img src="assets/user-male.png" style="display:inline-block" height="40px" />
+          </ion-button>
+          <ion-popover trigger="click-trigger" triggerAction="click">
+            <ng-template>
+              <ion-content class="ion-padding"><!-- List of Text Items -->
+                <ion-list>
+                  <ion-item>
+                    <ion-label>Name: Adam</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Age: 12</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Gender: Male</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Sexuality: Straight</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Occupation:Baby</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Nationality: American</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Location:New york</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Marital Status: Single</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Parents: Mike and Emily</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Children:None</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Net Worth: 0$</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Addictions:None</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Desease: None</ion-label>
+                  </ion-item>
+                </ion-list>
+               </ion-content>
+            </ng-template>
+          </ion-popover>
+
         </ion-col>
-        <ion-col class="hero-stat">George Lucas
-
-
-          <img src="assets/usa.png" style="display:inline-block" />
-
+        <ion-col class="hero-stat">
+          <ion-row><img class="crown" src="assets/crown.png" style="display:inline-block" height="10px" /></ion-row>
+          <ion-row style="flex-flow: row;">George Lucas<img src="assets/usa.png" style="display:inline-block" />
+          </ion-row>
 
           <ion-row class="hero-stat-group">
             Infant
@@ -120,11 +170,12 @@
     <img src="assets/stats.png" class="" alt="">
   </ion-button>
   <div class="footer-icon-group">
-    <div class="border-a"><img src="assets/gender.png" style="display:inline-block" height="35px" /></div>
-    <div class="border-a"><img src="assets/edu.png" style="display:inline-block" height="35px" /></div>
-    <div class="border-a"><img src="assets/newplus.png" style="display:inline-block" height="45px" /></div>
-    <div class="border-a"><img src="assets/asset.png" style="display:inline-block" height="35px" /></div>
-    <div id="open-modal" expand="block" class="border-a"><img src="assets/activities.png" style="display:inline-block" height="35px" /></div>
+    <div class="border-a"><img src="assets/gender.png" style="display:inline-block" height="45px" /></div>
+    <div class="border-a"><img src="assets/edu.png" style="display:inline-block" height="45px" /></div>
+    <div class="border-a"><img src="assets/newplus.png" style="display:inline-block" height="45px" width="50px" /></div>
+    <div class="border-a"><img src="assets/asset.png" style="display:inline-block" height="45px" /></div>
+    <div id="open-modal" expand="block" class="border-a"><img src="assets/activities.png" style="display:inline-block"
+        height="45px" /></div>
   </div>
 </div>
 <ion-modal trigger="open-modal" (willDismiss)="true">
@@ -153,16 +204,15 @@
       <br />
       STRESS
       <ion-progress-bar value="0.5"></ion-progress-bar>
-
+      <ion-button id="click-trigger">View Life Change</ion-button>
+      <ion-popover trigger="click-trigger" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding">Health is Low, eat healthy</ion-content>
+        </ng-template>
+      </ion-popover>
     </ion-content>
   </ng-template>
 </ion-modal>
-
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Inline Modal</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 
 <!-- <ion-footer class="ion-no-border">
