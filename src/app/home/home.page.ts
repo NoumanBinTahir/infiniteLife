@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonModal } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { StatsModalComponent } from '../stats-modal/stats-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -7,17 +8,14 @@ import { IonModal } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  constructor(private modalCntrl: ModalController) {}
 
-  @ViewChild(IonModal) modal: IonModal;
-  @ViewChild(IonModal) modal1: IonModal;
-  constructor() { }
-
-  ngOnInit() {
-  }
-  cancel() {
-    this.modal.dismiss(null, 'cancel');
-  }
-  cancel1() {
-    this.modal1.dismiss(null, 'cancel');
+  ngOnInit() {}
+  async openStats() {
+    const modal = await this.modalCntrl.create({
+      component: StatsModalComponent,
+      cssClass: 'stats-modal-class',
+    });
+    await modal.present();
   }
 }

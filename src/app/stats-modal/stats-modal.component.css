@@ -1,0 +1,8 @@
+ion-progress-bar {
+  padding: 4px;
+  min-width: 10%;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: white;
+}

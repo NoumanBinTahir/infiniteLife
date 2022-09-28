@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+    <ion-title>Stats 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <!-- Default Progressbar -->
+  HEALTH
+  <ion-progress-bar value="0.9"></ion-progress-bar> <br />
+  LOOKS
+  <ion-progress-bar value="1.0"></ion-progress-bar><br />
+  CONFIDENCE
+  <ion-progress-bar value="0.7"></ion-progress-bar><br />
+  STAMINA
+  <ion-progress-bar value="0.3"></ion-progress-bar><br />
+  CRAZINESS
+  <ion-progress-bar value="0.8"></ion-progress-bar>
+  <br />
+  STRESS
+  <ion-progress-bar value="0.5"></ion-progress-bar>
+  <ion-button id="click-trigger">View Life Change</ion-button>
+  <ion-popover trigger="click-trigger" triggerAction="click">
+    <ng-template>
+      <ion-content class="ion-padding">Health is Low, eat healthy</ion-content>
+    </ng-template>
+  </ion-popover>
+</ion-content>

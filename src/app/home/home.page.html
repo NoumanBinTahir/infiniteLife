@@ -6,8 +6,11 @@
     <ion-title>
       <ion-row>
         <ion-col class="hero-img">
-
-          <img src="assets/newdns.png" style="display:inline-block" height="35px" />
+          <img
+            src="assets/newdns.png"
+            style="display: inline-block"
+            height="35px"
+          />
         </ion-col>
         <ion-col class="hero-title">INFINITE LIFE</ion-col>
       </ion-row>
@@ -19,12 +22,21 @@
     <ion-title>
       <ion-row>
         <ion-col class="hero-img">
-          <ion-button class="profile-data" id="click-trigger" color="transparent" style="--padding-start: 0em;
-          --padding-end: 0em;"><img src="assets/user-male.png" style="display:inline-block" height="40px" />
+          <ion-button
+            class="profile-data"
+            id="click-trigger"
+            color="transparent"
+            style="--padding-start: 0em; --padding-end: 0em"
+            ><img
+              src="assets/user-male.png"
+              style="display: inline-block"
+              height="40px"
+            />
           </ion-button>
           <ion-popover trigger="click-trigger" triggerAction="click">
             <ng-template>
-              <ion-content class="ion-padding"><!-- List of Text Items -->
+              <ion-content class="ion-padding"
+                ><!-- List of Text Items -->
                 <ion-list>
                   <ion-item>
                     <ion-label>Name: Adam</ion-label>
@@ -66,23 +78,36 @@
                     <ion-label>Desease: None</ion-label>
                   </ion-item>
                 </ion-list>
-               </ion-content>
+              </ion-content>
             </ng-template>
           </ion-popover>
-
         </ion-col>
         <ion-col class="hero-stat">
-          <ion-row><img class="crown" src="assets/crown.png" style="display:inline-block" height="10px" /></ion-row>
-          <ion-row style="flex-flow: row;">George Lucas<img src="assets/usa.png" style="display:inline-block" />
+          <ion-row
+            ><img
+              class="crown"
+              src="assets/crown.png"
+              style="display: inline-block"
+              height="10px"
+          /></ion-row>
+          <ion-row style="flex-flow: row"
+            >George Lucas<img
+              src="assets/usa.png"
+              style="display: inline-block"
+            />
           </ion-row>
 
-          <ion-row class="hero-stat-group">
-            Infant
-          </ion-row>
+          <ion-row class="hero-stat-group"> Infant </ion-row>
         </ion-col>
         <ion-col>
           <ion-col class="hero-bank">
-            <div>$100<img src="assets/wallet.png" style="display:inline-block" height="17px" /></div>
+            <div>
+              $100<img
+                src="assets/wallet.png"
+                style="display: inline-block"
+                height="17px"
+              />
+            </div>
             <ion-row class="hero-bank-title">
               <ion-col class="hero-bank-title">
                 <div>Bank Balance</div>
@@ -95,7 +120,6 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="main-content">
-
   <div class="chat-messages">
     <div class="message-box-holder">
       <div class="message-box">
@@ -166,55 +190,40 @@
   </div>
 </ion-content>
 <div class="asset-box position-relative">
-  <ion-button id="open-modal1" class="position-absolute stat-btn" expand="block">
-    <img src="assets/stats.png" class="" alt="">
+  <ion-button class="position-absolute stat-btn" expand="block">
+    <img src="assets/stats.png" class="" alt="" />
   </ion-button>
   <div class="footer-icon-group">
-    <div class="border-a"><img src="assets/gender.png" style="display:inline-block" height="45px" /></div>
-    <div class="border-a"><img src="assets/edu.png" style="display:inline-block" height="45px" /></div>
-    <div class="border-a"><img src="assets/newplus.png" style="display:inline-block" height="45px" width="50px" /></div>
-    <div class="border-a"><img src="assets/asset.png" style="display:inline-block" height="45px" /></div>
-    <div id="open-modal" expand="block" class="border-a"><img src="assets/activities.png" style="display:inline-block"
-        height="45px" /></div>
+    <div class="border-a">
+      <img
+        src="assets/gender.png"
+        style="display: inline-block"
+        height="45px"
+      />
+    </div>
+    <div class="border-a">
+      <img src="assets/edu.png" style="display: inline-block" height="45px" />
+    </div>
+    <div class="border-a">
+      <img
+        src="assets/newplus.png"
+        style="display: inline-block"
+        height="45px"
+        width="50px"
+      />
+    </div>
+    <div class="border-a">
+      <img src="assets/asset.png" style="display: inline-block" height="45px" />
+    </div>
+    <div expand="block" class="border-a" (click)="openStats()">
+      <img
+        src="assets/activities.png"
+        style="display: inline-block"
+        height="45px"
+      />
+    </div>
   </div>
 </div>
-<ion-modal trigger="open-modal" (willDismiss)="true">
-  <ng-template>
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-button (click)="cancel1()">Close</ion-button>
-        </ion-buttons>
-        <ion-title>Stats 1</ion-title>
-
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <!-- Default Progressbar -->
-      HEALTH
-      <ion-progress-bar value="0.9"></ion-progress-bar> <br />
-      LOOKS
-      <ion-progress-bar value="1.0"></ion-progress-bar><br />
-      CONFIDENCE
-      <ion-progress-bar value="0.7"></ion-progress-bar><br />
-      STAMINA
-      <ion-progress-bar value="0.3"></ion-progress-bar><br />
-      CRAZINESS
-      <ion-progress-bar value="0.8"></ion-progress-bar>
-      <br />
-      STRESS
-      <ion-progress-bar value="0.5"></ion-progress-bar>
-      <ion-button id="click-trigger">View Life Change</ion-button>
-      <ion-popover trigger="click-trigger" triggerAction="click">
-        <ng-template>
-          <ion-content class="ion-padding">Health is Low, eat healthy</ion-content>
-        </ng-template>
-      </ion-popover>
-    </ion-content>
-  </ng-template>
-</ion-modal>
-
-
 <!-- <ion-footer class="ion-no-border">
   <ion-toolbar class="icons-tabs-btns">
    
