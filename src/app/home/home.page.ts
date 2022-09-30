@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ActivityModalComponent } from '../activity-modal/activity-modal.component';
 import { StatsModalComponent } from '../stats-modal/stats-modal.component';
 
 @Component({
@@ -15,6 +16,13 @@ export class HomePage implements OnInit {
     const modal = await this.modalCntrl.create({
       component: StatsModalComponent,
       cssClass: 'stats-modal-class',
+    });
+    await modal.present();
+  }
+  async openActivity() {
+    const modal = await this.modalCntrl.create({
+      component: ActivityModalComponent,
+      cssClass: 'activity-modal-class',
     });
     await modal.present();
   }

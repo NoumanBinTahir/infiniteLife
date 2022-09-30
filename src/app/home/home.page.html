@@ -190,7 +190,7 @@
   </div>
 </ion-content>
 <div class="asset-box position-relative">
-  <ion-button class="position-absolute stat-btn" expand="block">
+  <ion-button class="position-absolute stat-btn" expand="block" (click)="openStats()">
     <img src="assets/stats.png" class="" alt="" />
   </ion-button>
   <div class="footer-icon-group">
@@ -212,10 +212,10 @@
         width="50px"
       />
     </div>
-    <div class="border-a">
-      <img src="assets/asset.png" style="display: inline-block" height="45px" />
+    <div class="border-a" >
+      <img src="assets/asset.png" style="display: inline-block" height="45px"  />
     </div>
-    <div expand="block" class="border-a" (click)="openStats()">
+    <div class="border-a" expand="block" (click)="openActivity()">
       <img
         src="assets/activities.png"
         style="display: inline-block"
