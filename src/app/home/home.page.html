@@ -83,18 +83,15 @@
           </ion-popover>
         </ion-col>
         <ion-col class="hero-stat">
-          <ion-row
-            ><img
+          <ion-row>
+            <img
               class="crown"
               src="assets/crown.png"
               style="display: inline-block"
-              height="10px"
-          /></ion-row>
-          <ion-row style="flex-flow: row"
-            >George Lucas<img
+              height="10px"/></ion-row>
+          <ion-row style="flex-flow: row">George Lucas<img
               src="assets/usa.png"
-              style="display: inline-block"
-            />
+              style="display: inline-block"/>
           </ion-row>
 
           <ion-row class="hero-stat-group"> Infant </ion-row>
@@ -105,8 +102,7 @@
               $100<img
                 src="assets/wallet.png"
                 style="display: inline-block"
-                height="17px"
-              />
+                height="17px"/>
             </div>
             <ion-row class="hero-bank-title">
               <ion-col class="hero-bank-title">
@@ -212,15 +208,11 @@
         width="50px"
       />
     </div>
-    <div class="border-a" >
+    <div class="border-a" expand="block" (click)="openAssets()">
       <img src="assets/asset.png" style="display: inline-block" height="45px"  />
     </div>
     <div class="border-a" expand="block" (click)="openActivity()">
-      <img
-        src="assets/activities.png"
-        style="display: inline-block"
-        height="45px"
-      />
+      <img src="assets/activities.png" style="display: inline-block" height="45px" />
     </div>
   </div>
 </div>
