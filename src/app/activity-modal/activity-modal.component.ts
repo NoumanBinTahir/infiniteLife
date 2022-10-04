@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-activity-modal',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./activity-modal.component.scss'],
 })
 export class ActivityModalComponent implements OnInit {
-
-  constructor() { }
+  constructor(private modalCtrl: ModalController) {}
 
   ngOnInit() {}
-
+  dismissModal() {
+    this.modalCtrl.dismiss();
+  }
 }
