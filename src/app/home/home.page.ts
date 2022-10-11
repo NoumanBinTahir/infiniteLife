@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ActivityModalComponent } from '../activity-modal/activity-modal.component';
 import { AssetsModalComponent } from '../assets-modal/assets-modal.component';
+import { EducationModalComponent } from '../education-modal/education-modal.component';
+import { RelationshipModalComponent } from '../relationship-modal/relationship-modal.component';
 import { StatsModalComponent } from '../stats-modal/stats-modal.component';
 
 @Component({
@@ -31,6 +33,20 @@ export class HomePage implements OnInit {
     const modal = await this.modalCntrl.create({
       component: AssetsModalComponent,
       cssClass: 'Asset-modal-class',
+    });
+    await modal.present();
+  }
+  async openEducation() {
+    const modal = await this.modalCntrl.create({
+      component: EducationModalComponent,
+      cssClass: 'Edu-modal-class',
+    });
+    await modal.present();
+  }
+  async openRelationship() {
+    const modal = await this.modalCntrl.create({
+      component: RelationshipModalComponent,
+      cssClass: 'Relation-modal-class',
     });
     await modal.present();
   }
