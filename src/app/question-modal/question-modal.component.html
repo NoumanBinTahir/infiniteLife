@@ -1,3 +1,20 @@
-<p>
-  question-modal works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+    <ion-title>Question</ion-title>
+  </ion-toolbar>
+</ion-header>
+Which is your favourite fruit?
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Select fruit">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>

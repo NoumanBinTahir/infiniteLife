@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-choice-modal',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./choice-modal.component.scss'],
 })
 export class ChoiceModalComponent implements OnInit {
+  constructor(private modalCtrl: ModalController) {}
 
-  constructor() { }
-
-  ngOnInit() {}
-
+  ngOnInit(): void  {}
+  dismissModal() {
+    this.modalCtrl.dismiss();
+  }
 }

@@ -2,7 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ActivityModalComponent } from '../activity-modal/activity-modal.component';
 import { AssetsModalComponent } from '../assets-modal/assets-modal.component';
+import { ChoiceModalComponent } from '../choice-modal/choice-modal.component';
 import { EducationModalComponent } from '../education-modal/education-modal.component';
+import { QuestionModalComponent } from '../question-modal/question-modal.component';
 import { RelationshipModalComponent } from '../relationship-modal/relationship-modal.component';
 import { StatsModalComponent } from '../stats-modal/stats-modal.component';
 
@@ -50,4 +52,19 @@ export class HomePage implements OnInit {
     });
     await modal.present();
   }
+
+async openQuestion() {
+  const modal = await this.modalCntrl.create({
+    component: QuestionModalComponent,
+    cssClass: 'Question-modal-class',
+  });
+  await modal.present();
+}
+async openChoice() {
+  const modal = await this.modalCntrl.create({
+    component: ChoiceModalComponent,
+    cssClass: 'Choice-modal-class',
+  });
+  await modal.present();
+}
 }
