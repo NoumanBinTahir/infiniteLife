@@ -5,62 +5,6 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>John Watt</ion-card-title>
-      <ion-card-subtitle>Male <img src="assets/male.png" style="display: inline-block" height="20px"  /></ion-card-subtitle>
-    </ion-card-header>
-  
-   
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>SELECT YOUR PLACE</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-select interface="action-sheet" placeholder="YOUR PLACE">
-            <ion-select-option value="nyc">NEW YORK</ion-select-option>
-            <ion-select-option value="florida">FLORIDA</ion-select-option>
-            <ion-select-option value="newgercy">NEW GERCY</ion-select-option>
-          </ion-select>
-        </ion-item>
-        </ion-list>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>SELECT YOUR COUNTRY</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-select interface="action-sheet" placeholder="YOUR COUNTRY">
-            <ion-select-option value="uk">UNITED KINGDOM <img src="assets/uk.png" style="display: inline-block" height="10px"  /></ion-select-option>
-            <ion-select-option value="us">UNITED STATES <img src="assets/usabg.png" style="display: inline-block" height="10px"  /></ion-select-option>
-            <ion-select-option value="ru">RUSSIA <img src="assets/ru.png" style="display: inline-block" height="10px"  /></ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>SELECT YOUR GENDER</ion-card-title>
-    </ion-card-header>
+  <ion-button (click)="nextpage()">Confirm</ion-button>
 
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-select interface="action-sheet" placeholder="GENDER">
-            <ion-select-option value="male">Male <img src="assets/male.png" style="display: inline-block" height="10px"  /></ion-select-option>
-            <ion-select-option value="female">Female<img src="assets/female.png" style="display: inline-block" height="10px"  /></ion-select-option>
-            <ion-select-option value="trans">Transgender</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
 </ion-content>
-<ion-button (click)="nextpage()">Start Your Infinite Life<ion-icon name="accessibility-outline"></ion-icon></ion-button>
