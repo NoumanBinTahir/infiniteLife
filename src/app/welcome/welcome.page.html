@@ -57,13 +57,25 @@
       <ion-list>
         <ion-item>
           <ion-select interface="action-sheet" placeholder="GENDER">
-            <ion-select-option value="male">Male <img src="assets/male.png" style="display: inline-block" height="10px"  /></ion-select-option>
-            <ion-select-option value="female">Female<img src="assets/female.png" style="display: inline-block" height="10px"  /></ion-select-option>
+            <ion-select-option value="male">Male </ion-select-option>
+            <ion-select-option value="female">Female</ion-select-option>
             <ion-select-option value="trans">Transgender</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>slider</ion-card-title>
+    </ion-card-header>
 
+    <ion-card-content style="height:500px;">
+      <swiper (slideChange)="onSlideChange($event)" (swiper)="setSwiperInstance($event)">
+        <ng-template swiperSlide><img src="assets/male.png" style="display: inline-block" height="10px"  /></ng-template>
+        <ng-template swiperSlide>Slide 2</ng-template>
+        <ng-template swiperSlide>Slide 3</ng-template>
+      </swiper>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

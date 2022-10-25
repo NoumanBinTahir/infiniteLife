@@ -24,6 +24,21 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';
+
+
+.action-sheet-group:nth-child(1) button:nth-child(1) .action-sheet-button-inner:after {
+  content: '  ♂️';
+}
+
+.action-sheet-group:nth-child(1) button:nth-child(2) .action-sheet-button-inner:after {
+  content: '  ♀️';
+}
+
+.action-sheet-group:nth-child(1) button:nth-child(3) .action-sheet-button-inner:after {
+  content: '  ⚧️';
+}
 
 .stats-modal-class {
   height: 70%;
