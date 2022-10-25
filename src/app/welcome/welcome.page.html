@@ -67,14 +67,15 @@
   </ion-card>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>slider</ion-card-title>
+      <ion-card-title>Swipe to Select!</ion-card-title>
     </ion-card-header>
 
-    <ion-card-content style="height:500px;">
+    <ion-card-content style="height:100px;">
+
       <swiper (slideChange)="onSlideChange($event)" (swiper)="setSwiperInstance($event)">
-        <ng-template swiperSlide><img src="assets/male.png" style="display: inline-block" height="10px"  /></ng-template>
-        <ng-template swiperSlide>Slide 2</ng-template>
-        <ng-template swiperSlide>Slide 3</ng-template>
+        <ng-template swiperSlide><img src="assets/8.png" style="display: inline-block" height="10px"  /></ng-template>
+        <ng-template swiperSlide><img src="assets/9.png" style="display: inline-block" height="10px"  /></ng-template>
+        <ng-template swiperSlide><img src="assets/10.png" style="display: inline-block" height="10px"  /></ng-template>
       </swiper>
     </ion-card-content>
   </ion-card>
