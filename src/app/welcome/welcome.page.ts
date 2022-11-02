@@ -7,20 +7,23 @@ import { SwiperModule } from 'swiper/angular';
   templateUrl: './welcome.page.html',
   styleUrls: ['./welcome.page.scss'],
 })
-export class WelcomePage implements OnInit 
-{
-  constructor(private route: Router) { }
-  ngOnInit() {
+export class WelcomePage implements OnInit {
+  option: string;
+  constructor(private route: Router) {
+    this.option = 'name';
   }
+  ngOnInit() {}
   nextpage() {
     this.route.navigate(['/home']);
   }
-  onSlideChange(swiper :any)
-  {
-    console.log(swiper[0].activeIndex)
+  onSlideChange(swiper: any) {
+    console.log(swiper[0].activeIndex);
   }
-  setSwiperInstance(swiper : any)
-  {
-    console.log(swiper.activeIndex)
+  setSwiperInstance(swiper: any) {
+    console.log(swiper.activeIndex);
+  }
+
+  set_option(option: any) {
+    this.option = option;
   }
 }

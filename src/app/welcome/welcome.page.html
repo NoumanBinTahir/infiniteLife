@@ -1,89 +1,170 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>New Life</ion-title>
+    <ion-title>New Life {{option}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button fill="outline" expand="block" (click)="nextpage()">Start Your Infinite Life<ion-icon name="accessibility-outline"></ion-icon></ion-button>
+  <ion-button fill="outline" expand="block" (click)="nextpage()">
+    Start Your Infinite Life<ion-icon name="accessibility-outline"> </ion-icon>
+  </ion-button>
 
-  <ion-card>
+  <ion-card *ngIf="option=='name'">
     <ion-card-header>
-      <ion-card-title > <ion-button  expand="block" fill="outline">John Watt</ion-button> </ion-card-title>
-      <ion-card-subtitle><ion-button  expand="block" fill="outline">Male<img src="assets/male.png" style="display: inline-block" height="20px"  /></ion-button> </ion-card-subtitle>
+      <ion-card-title>
+        <ion-button
+          expand="block"
+          fill="outline"
+          (click)="set_option('country')"
+          >John Watt</ion-button
+        >
+      </ion-card-title>
+      <ion-card-subtitle>
+        <ion-button
+          expand="block"
+          fill="outline"
+          (click)="set_option('country')"
+        >
+          Male
+          <img
+            src="assets/male.png"
+            style="display: inline-block"
+            height="20px"
+          />
+        </ion-button>
+      </ion-card-subtitle>
     </ion-card-header>
-  
-   
   </ion-card>
-   <ion-card>
+  <ion-card *ngIf="option=='country'">
     <ion-card-header>
       <ion-card-title>
-        <ion-button  expand="block" shape="round">SELECT YOUR COUNTRY</ion-button>
-        </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-card-title>
-        <ion-button color="success"  expand="block">UNITED KINGDOM</ion-button>
-        </ion-card-title>
-        <ion-card-title>
-          <ion-button color="success"  expand="block">UNITED STATES</ion-button>
-          </ion-card-title>
-          <ion-card-title>
-            <ion-button  expand="block" color="success">RUSSIA</ion-button>
-        </ion-card-title>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        <ion-button shape="round"  expand="block">SELECT YOUR PLACE</ion-button>
-        </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-card-title>
-        <ion-button color="success"  expand="block">NEW YORK</ion-button>
-        </ion-card-title>
-        <ion-card-title>
-          <ion-button color="success"  expand="block">FLORIDA</ion-button>
-          </ion-card-title>
-          <ion-card-title>
-            <ion-button color="success"  expand="block">NEW GERCY</ion-button>
-        </ion-card-title>
-    </ion-card-content>
-  </ion-card>
- 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        <ion-button shape="round"  expand="block">SELECT YOUR GENDER</ion-button>
-        </ion-card-title>
+        <ion-button expand="block" shape="round"
+          >SELECT YOUR COUNTRY</ion-button
+        >
+      </ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-card-title>
-        <ion-button color="success"  expand="block">Male</ion-button>
-        </ion-card-title>
-        <ion-card-title>
-          <ion-button color="success"  expand="block">Female</ion-button>
-          </ion-card-title>
-          <ion-card-title>
-            <ion-button color="success"  expand="block">Transgender</ion-button>
-        </ion-card-title>
+        <ion-button color="success" expand="block" (click)="set_option('place')"
+          >UNITED KINGDOM</ion-button
+        >
+      </ion-card-title>
+      <ion-card-title>
+        <ion-button color="success" expand="block" (click)="set_option('place')"
+          >UNITED STATES</ion-button
+        >
+      </ion-card-title>
+      <ion-card-title>
+        <ion-button expand="block" color="success" (click)="set_option('place')"
+          >RUSSIA</ion-button
+        >
+      </ion-card-title>
     </ion-card-content>
   </ion-card>
-  
-  <ion-card>
+  <ion-card *ngIf="option=='place'">
+    <ion-card-header>
+      <ion-card-title>
+        <ion-button shape="round" expand="block">SELECT YOUR PLACE</ion-button>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>
+        <ion-button
+          color="success"
+          expand="block"
+          (click)="set_option('gender')"
+          >NEW YORK</ion-button
+        >
+      </ion-card-title>
+      <ion-card-title>
+        <ion-button
+          color="success"
+          expand="block"
+          (click)="set_option('gender')"
+          >FLORIDA</ion-button
+        >
+      </ion-card-title>
+      <ion-card-title>
+        <ion-button
+          color="success"
+          expand="block"
+          (click)="set_option('gender')"
+          >NEW GERCY</ion-button
+        >
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="option=='gender'">
+    <ion-card-header>
+      <ion-card-title>
+        <ion-button shape="round" expand="block">SELECT YOUR GENDER</ion-button>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>
+        <ion-button
+          color="success"
+          expand="block"
+          (click)="set_option('bitmoji')"
+          >Male</ion-button
+        >
+      </ion-card-title>
+      <ion-card-title>
+        <ion-button
+          color="success"
+          expand="block"
+          (click)="set_option('bitmoji')"
+          >Female</ion-button
+        >
+      </ion-card-title>
+      <ion-card-title>
+        <ion-button
+          color="success"
+          expand="block"
+          (click)="set_option('bitmoji')"
+          >Transgender</ion-button
+        >
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="option=='bitmoji'">
     <ion-card-header>
       <ion-card-title>
         <ion-button fill="clear" expand="block">Swipe to Select!</ion-button>
-        </ion-card-title>
+      </ion-card-title>
     </ion-card-header>
 
-    <ion-card-content style="height:100px;">
-
-      <swiper (slideChange)="onSlideChange($event)" (swiper)="setSwiperInstance($event)">
-        <ng-template swiperSlide><img src="assets/8.png" style="display: inline-block" height="10px"  /></ng-template>
-        <ng-template swiperSlide><img src="assets/9.png" style="display: inline-block" height="10px"  /></ng-template>
-        <ng-template swiperSlide><img src="assets/10.png" style="display: inline-block" height="10px"  /></ng-template>
+    <ion-card-content style="height: 100px">
+      <swiper
+        (slideChange)="onSlideChange($event)"
+        (swiper)="setSwiperInstance($event)"
+      >
+        <ng-template swiperSlide>
+          <img
+            src="assets/8.png"
+            (click)="nextpage()"
+            style="display: inline-block"
+            height="10px"
+          />
+        </ng-template>
+        <ng-template swiperSlide>
+          <img
+            src="assets/9.png"
+            (click)="nextpage()"
+            style="display: inline-block"
+            height="10px"
+          />
+        </ng-template>
+        <ng-template swiperSlide>
+          <img
+            src="assets/10.png"
+            (click)="nextpage()"
+            style="display: inline-block"
+            height="10px"
+          />
+        </ng-template>
       </swiper>
     </ion-card-content>
   </ion-card>
