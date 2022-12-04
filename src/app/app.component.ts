@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { JobsModalComponent } from './jobs-modal/jobs-modal.component';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -11,5 +13,15 @@ export class AppComponent {
     
   ];
   public labels = ['New Life', 'Save Life', 'Accessories', 'Careers', 'Help', 'Settings'];
-  constructor() {}
+  constructor(private modalCtrl: ModalController) {}
+  dismissModal() {
+    this.modalCtrl.dismiss();
+  }
+  async openJobs() {
+    const modal = await this.modalCtrl.create({
+      component: JobsModalComponent,
+      cssClass: 'stats-modal-class',
+    });
+    await modal.present();
+  }
 }

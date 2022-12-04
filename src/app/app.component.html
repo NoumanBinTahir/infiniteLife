@@ -11,6 +11,10 @@
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
+            <ion-item lines="none" detail="false" routerLinkActive="selected" (click)="openJobs()">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>Jobs</ion-label>
+            </ion-item>
           </ion-menu-toggle>
         </ion-list>
 
