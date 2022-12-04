@@ -20,7 +20,7 @@ export class AppComponent {
   async openJobs() {
     const modal = await this.modalCtrl.create({
       component: JobsModalComponent,
-      cssClass: 'stats-modal-class',
+      cssClass: 'jobs-modal-class',
     });
     await modal.present();
   }
